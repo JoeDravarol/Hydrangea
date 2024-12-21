@@ -1,0 +1,254 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Ghost button */
+.ghost-button,
+.ynab-new-theme-switcher .ynab-new-theme-switcher-option-available-balance-style button .balance-pills {
+  align-items: center;
+  display: flex;
+  height: 3.25rem;
+  justify-content: center;
+}
+
+.ghost-button {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  flex-direction: row;
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--labelSecondary);
+  transition: background-color 0.15s ease;
+}
+
+.ghost-button > .ynab-new-icon {
+  margin-right: 0.5rem;
+}
+
+.ghost-button.is-icon-only > .ynab-new-icon {
+  margin-right: 0;
+}
+
+.ghost-button.is-dropdown > .ynab-new-icon {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.ghost-button.primary:hover:not([disabled]),
+.ghost-button:hover:not([disabled]) {
+  background-color: var(--buttonSecondaryBackground);
+}
+
+.ghost-button:focus-visible {
+  outline-color: var(--actionPrimary);
+  outline-style: auto;
+  outline-width: 1px;
+}
+
+.ghost-button[disabled] {
+  color: var(--labelTertiary);
+}
+
+.ghost-button.primary {
+  color: var(--labelAction);
+}
+
+.ghost-button.primary[disabled] {
+  color: var(--actionPrimaryDisabled);
+}
+
+.ghost-button.destructive {
+  color: var(--labelNegative);
+}
+
+.ghost-button.destructive:hover:not([disabled]) {
+  background-color: var(--buttonDestructiveBackground);
+}
+
+.ghost-button.destructive[disabled] {
+  color: var(--labelNegativeDisabled);
+}
+
+.ghost-button.contrast {
+  color: var(--labelDarkBackgroundPrimary);
+}
+
+.ghost-button.contrast[disabled] {
+  color: var(--labelDarkBackgroundSecondary);
+}
+
+/* ynab button */
+.ynab-button {
+  background-color: var(--buttonPrimaryBackground);
+  color: var(--labelDarkBackgroundPrimary);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.375rem 1rem;
+  transition: background-color 0.15s ease;
+}
+
+.ynab-button > .ynab-new-icon {
+  margin-right: 0.5rem;
+}
+
+.ynab-button.is-icon-only > .ynab-new-icon {
+  margin-right: 0;
+}
+
+.ynab-button.is-large {
+  min-height: 3rem;
+  padding: 0.375rem 1.5rem;
+}
+
+.ynab-button:active,
+.ynab-button:hover {
+  background-color: var(--buttonPrimaryBackgroundActive);
+  color: var(--labelDarkBackgroundPrimary);
+  align-items: center;
+  justify-content: center;
+}
+
+.ynab-button:focus-visible {
+  outline-color: var(--actionPrimary);
+  outline-offset: 0.125rem;
+  outline-style: auto;
+  outline-width: 0.125rem;
+}
+
+.ynab-button[disabled] {
+  cursor: auto;
+  background-color: var(--buttonPrimaryBackgroundDisabled);
+  border-color: var(--buttonPrimaryBackgroundDisabled);
+  color: var(--labelTertiary);
+}
+
+.ynab-button.secondary:not([disabled]) {
+  background-color: var(--buttonSecondaryBackground);
+  color: var(--buttonSecondaryLabel);
+  border: 0;
+}
+
+.ynab-button.secondary:not([disabled]):active,
+.ynab-button.secondary:not([disabled]):hover {
+  background-color: var(--buttonSecondaryBackgroundActive);
+  color: var(--buttonSecondaryLabel);
+}
+
+.ynab-button.secondary:not([disabled]):focus-visible {
+  outline-color: var(--actionPrimary);
+  outline-style: auto;
+  outline-width: 1px;
+}
+
+.ynab-button.destructive:not([disabled]) {
+  color: var(--buttonDestructiveLabel);
+  background-color: var(--buttonDestructiveBackground);
+  border: 0;
+}
+
+.ynab-button.destructive:not([disabled]):active,
+.ynab-button.destructive:not([disabled]):hover {
+  background-color: var(--buttonDestructiveBackgroundActive);
+  border-color: var(--buttonDestructiveBackgroundActive);
+  color: var(--labelDarkBackgroundPrimary);
+}
+
+.ynab-button.destructive:not([disabled]):focus-visible {
+  outline-color: var(--actionPrimary);
+  outline-style: auto;
+  outline-width: 1px;
+}
+
+.ynab-button.warning:not([disabled]) {
+  color: var(--calloutWarningButtonForeground);
+  background-color: var(--calloutWarningButtonBackground);
+  border: 0;
+}
+
+.ynab-button.warning:not([disabled]):active,
+.ynab-button.warning:not([disabled]):hover {
+  background-color: var(--calloutWarningButtonBackgroundActive);
+  border-color: var(--calloutWarningButtonBackgroundActive);
+  color: var(--calloutWarningButtonForeground);
+}
+
+.ynab-button.warning:not([disabled]):focus-visible {
+  outline-color: var(--actionPrimary);
+  outline-style: auto;
+  outline-width: 1px;
+}
+
+.ynab-button.contrast:not([disabled]) {
+  background-color: var(--backgroundDarkSecondary);
+  color: var(--labelDarkBackgroundPrimary);
+}
+
+.ynab-button.contrast:not([disabled]):active,
+.ynab-button.contrast:not([disabled]):hover {
+  background-color: var(--backgroundDarkTertiary);
+  color: var(--labelDarkBackgroundPrimary);
+}
+
+.ynab-button.contrast:not([disabled]):focus-visible {
+  outline-color: var(--actionPrimary);
+  outline-style: auto;
+  outline-width: 1px;
+}
+
+a.ynab-button {
+  box-sizing: border-box;
+  height: 2rem;
+  text-decoration: none;
+}
+
+a.ynab-button,
+a.ynab-button:hover {
+  display: inline-flex;
+}
+
+/* layout */
+.layout {
+  flex-direction: column;
+}
+
+.layout.has-support-access-banner {
+  height: calc(100% - 2.5rem);
+}
+
+/* content */
+.content-min-break.settings-page {
+  overflow: auto;
+}
+
+.content-layout,
+.layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.top-layout-banner + .content-layout {
+  height: calc(100% - 3.125rem);
+}
+
+.content,
+.placeholder {
+  flex: 1 1 auto;
+  background-color: var(--backgroundPrimary);
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.content .content-min-break,
+.placeholder .content-min-break {
+  height: 100%;
+  min-width: 50rem;
+  position: relative;
+}

@@ -1,0 +1,177 @@
+/* HeaderTotals */
+.to-be-budgeted {
+  background-color: var(--categoryBalanceZeroBackground);
+  color: var(--categoryBalanceZeroLabel);
+  align-items: center;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.875rem;
+  justify-content: space-between;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem 0.75rem;
+  text-align: left;
+}
+
+.to-be-budgeted > button:last-child {
+  margin-left: 2.5rem;
+}
+
+.to-be-budgeted .to-be-budgeted-heading-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.to-be-budgeted .to-be-budgeted-heading-wrapper h1 {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.to-be-budgeted .to-be-budgeted-heading-wrapper .to-be-budgeted-view-breakdown {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.to-be-budgeted h1 {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.to-be-budgeted h1 .ynab-new-icon {
+  fill: currentColor;
+  margin-left: 0.5rem;
+  opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: alpha(opacity=0);
+}
+
+.to-be-budgeted h1 .ynab-new-icon:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.to-be-budgeted .to-be-budgeted-amount {
+  align-items: center;
+  color: currentColor;
+  display: flex;
+}
+
+.to-be-budgeted.is-negative {
+  background-color: var(--calloutNegativeProminentBackground);
+  color: var(--calloutNegativeLabel);
+}
+
+.to-be-budgeted.is-negative .ynab-new-icon {
+  fill: var(--calloutNegativeLabel);
+}
+
+.to-be-budgeted.is-positive {
+  background-color: var(--calloutPositiveProminentBackground);
+  color: var(--calloutPositiveLabel);
+}
+
+.to-be-budgeted-button {
+  background-color: var(--calloutSecondaryButtonBackground);
+  color: var(--calloutSecondaryButtonForeground);
+  align-items: center;
+  border-radius: 0.5rem;
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  opacity: 0.8;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+  filter: alpha(opacity=80);
+  padding: 0.25rem 1rem;
+  white-space: nowrap;
+}
+
+.to-be-budgeted-button:hover {
+  background-color: var(--calloutSecondaryButtonBackgroundActive);
+}
+
+.to-be-budgeted-button svg {
+  fill: currentColor;
+  pointer-events: none;
+  width: 0.5rem;
+}
+
+.to-be-budgeted-button svg:first-child {
+  margin-right: 0.5rem;
+}
+
+.to-be-budgeted-button svg:last-child {
+  margin-left: 0.7rem;
+  margin-right: 0;
+}
+
+.to-be-budgeted-button.auto-assign-button svg {
+  width: 1rem;
+}
+
+.is-negative .to-be-budgeted-button,
+.is-positive .to-be-budgeted-button {
+  background-color: var(--calloutPositiveButtonBackground);
+  color: var(--calloutPositiveButtonForeground);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.is-positive .to-be-budgeted-button:hover {
+  background-color: var(--calloutPositiveButtonBackgroundActive);
+}
+
+.is-negative .to-be-budgeted-button {
+  background-color: var(--calloutNegativeButtonBackground);
+  color: var(--calloutNegativeButtonForeground);
+}
+
+.is-negative .to-be-budgeted-button:hover {
+  background-color: var(--calloutNegativeButtonBackgroundActive);
+}
+
+.to-be-budgeted-button.mod-reverse {
+  flex-direction: row-reverse;
+}
+
+.to-be-budgeted-button.mod-reverse svg {
+  margin-left: 0;
+  margin-right: 0.75rem;
+}
+
+.to-be-budgeted-icon {
+  align-items: center;
+  cursor: default;
+}
+
+.to-be-budgeted-icon svg {
+  color: var(--categoryBalanceZeroLabel);
+  height: 1.875rem;
+  opacity: 0.8;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+  filter: alpha(opacity=80);
+  width: 1.875rem;
+}
+
+.is-positive .to-be-budgeted-icon svg {
+  color: var(--categoryBalancePositiveLabel);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.is-negative .to-be-budgeted-icon svg {
+  color: var(--categoryBalanceNegativeLabel);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}

@@ -1,4 +1,4 @@
-import { InfoCircleIcon } from '~/components/icons/info-circle-icon';
+import InfoCircleIcon from '~/components/icons/info-circle-icon';
 
 interface BudgetHeaderTotalProps {
   label: string;
@@ -6,7 +6,7 @@ interface BudgetHeaderTotalProps {
   isNegative?: boolean;
 }
 
-export function BudgetHeaderTotal({ label, budgetedAmount, isNegative }: BudgetHeaderTotalProps) {
+export default function BudgetHeaderTotal({ label, budgetedAmount, isNegative }: BudgetHeaderTotalProps) {
   return (
     <div className="to-be-budgeted-heading-wrapper">
       <h1 id="budget-header-total">

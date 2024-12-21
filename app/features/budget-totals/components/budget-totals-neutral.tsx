@@ -1,6 +1,6 @@
-import { CheckCircleFillIcon } from '~/components/icons/check-circle-fill-icon';
-import { AutoAssignIcon } from './auto-assign-button';
-import { BudgetHeaderTotal } from './budget-header-total';
+import CheckCircleFillIcon from '~/components/icons/check-circle-fill-icon';
+import AutoAssignIcon from './auto-assign-icon';
+import BudgetHeaderTotal from './budget-header-total';
 import Layout from './layout';
 
 export default function BudgetTotalsNeutral() {

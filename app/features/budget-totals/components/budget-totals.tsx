@@ -7,7 +7,7 @@ interface BudgetTotalsProps {
   budgetedAmount: number;
 }
 
-export function BudgetTotals({ budgetedAmount }: BudgetTotalsProps) {
+export default function BudgetTotals({ budgetedAmount }: BudgetTotalsProps) {
   const isZero = budgetedAmount === 0;
   const isNegative = budgetedAmount < 0;
   const twoDecimalBudgetAmount = formatToTwoDecimalPlaces(budgetedAmount);

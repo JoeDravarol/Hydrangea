@@ -1,5 +1,5 @@
 import { cn } from '~/utils/cn';
-import { BudgetTotals } from '../budget-totals/components/budget-totals';
+import BudgetTotals from '../budget-totals/components/budget-totals';
 import Calendar from '../calendar/components/calendar';
 
 export default function BudgetHeader() {

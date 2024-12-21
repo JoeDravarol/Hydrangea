@@ -1,7 +1,7 @@
 import type { BaseIconProps } from './icon';
 import Icon from './icon';
 
-export function InfoCircleIcon({
+export default function InfoCircleIcon({
   width = 16,
   height = 16,
   ...props

@@ -9,6 +9,7 @@ import {
   ScrollRestoration,
 } from 'react-router';
 import stylesheet from './app.css?url';
+import bh from './features/budget-header/budget-header.css?url';
 import bt from './features/budget-totals/budget-totals.css?url';
 import cal from './features/calendar/calendar.css?url';
 import root from './root.css?url';
@@ -28,6 +29,7 @@ export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: root },
   { rel: 'stylesheet', href: temp },
   { rel: 'stylesheet', href: bt },
+  { rel: 'stylesheet', href: bh },
   { rel: 'stylesheet', href: cal },
   { rel: 'stylesheet', href: stylesheet },
 ];

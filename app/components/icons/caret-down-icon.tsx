@@ -1,7 +1,7 @@
 import type { BaseIconProps } from './icon';
 import Icon from './icon';
 
-export function CaretDownIcon({
+export default function CaretDownIcon({
   width = 16,
   height = 16,
   ...props

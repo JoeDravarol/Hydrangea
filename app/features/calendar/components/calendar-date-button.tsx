@@ -1,4 +1,4 @@
-import { CaretDownIcon } from '~/components/icons/caret-down-icon';
+import CaretDownIcon from '~/components/icons/caret-down-icon';
 
 interface CalendarDateButtonProps {
   label: string;

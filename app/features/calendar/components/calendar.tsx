@@ -9,7 +9,6 @@ import {
 import CalendarDateButton from './calendar-date-button';
 import CalendarNoteButton from './calendar-note-button';
 import GoToTodayButton from './go-to-today-button';
-
 import NextMonthButton from './next-month-button';
 import PrevMonthButton from './prev-month-button';
 

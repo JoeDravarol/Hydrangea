@@ -1,6 +1,6 @@
-import { CaretDownIcon } from '~/components/icons/caret-down-icon';
+import CaretDownIcon from '~/components/icons/caret-down-icon';
 import AutoAssignButton from './auto-assign-button';
-import { BudgetHeaderTotal } from './budget-header-total';
+import BudgetHeaderTotal from './budget-header-total';
 import Layout from './layout';
 
 export interface BudgetTotalsPositiveProps {

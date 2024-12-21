@@ -1,0 +1,75 @@
+/* Calendar */
+.budget-header-calendar {
+  align-items: center;
+  display: flex;
+  flex: 0 0 30%;
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.budget-header-calendar .budget-header-calendar-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+.budget-header-calendar .budget-header-calendar-date:hover .ynab-new-icon {
+  color: var(--actionPrimaryActive);
+}
+
+.budget-header-calendar .budget-header-calendar-date-button {
+  color: var(--labelPrimary);
+  align-items: center;
+  display: flex;
+  line-height: 75%;
+  white-space: nowrap;
+}
+
+.budget-header-calendar svg {
+  color: var(--actionPrimary);
+  margin-left: 0.3rem;
+  transition-property: all;
+}
+
+.budget-header-calendar .budget-header-calendar-note {
+  color: var(--labelSecondary);
+  display: block;
+  max-width: 7rem;
+  padding-top: 0.125rem;
+  text-align: center;
+  text-transform: initial;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.budget-header-calendar .budget-header-calendar-note:hover {
+  text-decoration: underline;
+}
+
+.budget-header-calendar .budget-header-calendar-next,
+.budget-header-calendar .budget-header-calendar-prev {
+  color: var(--actionPrimary);
+  transition-property: all;
+  line-height: 0;
+  width: 2.5rem;
+}
+
+.budget-header-calendar .budget-header-calendar-next:hover,
+.budget-header-calendar .budget-header-calendar-prev:hover {
+  color: var(--actionPrimaryActive);
+}
+
+.budget-header-calendar .budget-header-calendar-next.disabled,
+.budget-header-calendar .budget-header-calendar-next.disabled svg,
+.budget-header-calendar .budget-header-calendar-next.disabled:hover,
+.budget-header-calendar .budget-header-calendar-next.disabled:hover svg,
+.budget-header-calendar .budget-header-calendar-prev.disabled,
+.budget-header-calendar .budget-header-calendar-prev.disabled svg,
+.budget-header-calendar .budget-header-calendar-prev.disabled:hover,
+.budget-header-calendar .budget-header-calendar-prev.disabled:hover svg {
+  color: var(--actionPrimaryDisabled);
+}

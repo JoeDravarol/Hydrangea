@@ -1,0 +1,53 @@
+/* BudgetHeader */
+.budget-header {
+  color: var(--labelPrimary);
+  border-bottom: 1px solid var(--separatorStandard);
+}
+
+.budget-header .budget-header-flexbox {
+  display: flex;
+  min-height: 5.5rem;
+}
+
+.budget-header .budget-header-item {
+  background-color: var(--headerBackground);
+  padding: 0.6em;
+  text-align: center;
+}
+
+.budget-header .budget-header-item:first-child {
+  border-left: none;
+}
+
+.budget-header-go-to-today.button {
+  margin-left: 1rem;
+}
+
+.budget-header-days {
+  color: var(--labelPrimary);
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  margin-right: 0.5rem;
+  min-width: 7rem;
+}
+
+.budget-header-days.budget-header-no-days {
+  border: 0;
+}
+
+.budget-header-days .budget-header-days-age {
+  color: var(--labelPositive);
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.budget-header-days .budget-header-days-age.not-available,
+.budget-header-days .budget-header-days-label {
+  color: var(--labelSecondary);
+}
+
+.budget-header-days .budget-header-days-label .ynab-new-icon {
+  position: relative;
+  top: 0.14em;
+}

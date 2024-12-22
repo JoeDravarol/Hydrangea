@@ -1,6 +1,5 @@
 import ContentLayout from '~/components/layouts/content-layout';
 import PageLayout from '~/components/layouts/page-layout';
-import BudgetHeader from '~/features/budget-header/budget-header';
 import SidebarNav from '~/features/sidebar-nav/components/sidebar-nav';
 
 export function meta() {
@@ -10,12 +9,12 @@ export function meta() {
   ];
 }
 
-export default function Home() {
+export default function Accounts() {
   return (
     <PageLayout>
       <SidebarNav />
       <ContentLayout className="has-budget-views">
-        <BudgetHeader />
+        <h1>Accounts</h1>
       </ContentLayout>
     </PageLayout>
   );

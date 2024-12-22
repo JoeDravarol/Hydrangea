@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router';
+import CollapsedMenuButton from './collapsed-menu-button';
 import AccountsIcon from './icons/accounts-icon';
 import BudgetIcon from './icons/budget-icon';
 import ReportsIcon from './icons/reports-icon';
@@ -10,6 +11,8 @@ export default function NavMain() {
 
   return (
     <ul className="nav-main">
+      <CollapsedMenuButton />
+
       <NavLink
         label="Budget"
         linkTo="/"

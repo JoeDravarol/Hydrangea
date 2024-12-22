@@ -252,3 +252,123 @@ a.ynab-button:hover {
   min-width: 50rem;
   position: relative;
 }
+
+/* Tooltip */
+.tooltip-relative-container {
+  position: relative;
+}
+
+.tooltip-content {
+  background-color: var(--backgroundDarkPrimary);
+  color: var(--labelDarkBackgroundSecondary);
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  max-width: 22.5rem;
+  opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: alpha(opacity=0);
+  padding: 0.75rem;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
+  transition: opacity 0.2s;
+  width: max-content;
+  z-index: 1000;
+}
+
+.tooltip-relative-container:focus-visible .tooltip-content,
+.tooltip-relative-container:hover .tooltip-content {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  transition: opacity 0.2s 0.5s;
+}
+
+.tooltip-content.tooltip-below {
+  left: 0;
+  top: calc(100% + 0.5rem);
+}
+
+.tooltip-content.tooltip-below.tooltip-center {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.tooltip-content.tooltip-below.tooltip-right {
+  left: unset;
+  right: 0;
+}
+
+.tooltip-content.tooltip-above {
+  bottom: calc(100% + 0.5rem);
+  left: 0;
+}
+
+.tooltip-content.tooltip-above.tooltip-center {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.tooltip-content.tooltip-above.tooltip-right {
+  left: unset;
+  right: 0;
+}
+
+.tooltip-global {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10080;
+}
+
+.tooltip-global [role='tooltip'] {
+  opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: alpha(opacity=0);
+  position: absolute;
+  transition: opacity 0.2s;
+}
+
+.tooltip-global [role='tooltip'].tooltip-visible {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  transition: opacity 0.2s 0.5s;
+}
+
+.tooltip-global [role='tooltip'].no-fade-out {
+  transition: none;
+}
+
+/* Shortcut tooltip */
+.shortcut-tooltip {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.shortcut-keys {
+  align-items: stretch;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: space-between;
+}
+
+.shortcut-keys .shortcut-key {
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  background-color: var(--backgroundDarkSecondary);
+  align-items: center;
+  border-radius: 0.25rem;
+  display: flex;
+  font-size: 0.875rem;
+  justify-content: center;
+  padding: 0 0.25rem;
+}
+
+.shortcut-keys .shortcut-key.shortcut-then-key {
+  background-color: unset;
+}

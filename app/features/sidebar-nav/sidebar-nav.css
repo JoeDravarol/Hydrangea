@@ -1,0 +1,752 @@
+/* Nav sidebar */
+.sidebar-nav-arrow {
+  color: var(--sidebarLabelPrimary);
+  flex: 0 0 auto;
+  width: 0.75rem;
+}
+
+.sidebar-nav-menu-user {
+  background-color: var(--sidebarBackground);
+  bottom: 0;
+  font-size: 1rem;
+  height: 2.5rem;
+  padding: 0.6rem 0.5rem;
+  position: fixed;
+  width: 260px;
+}
+
+.sidebar,
+.sidebar a {
+  color: var(--sidebarLabelPrimary);
+}
+
+.sidebar {
+  background-color: var(--sidebarBackground);
+  height: 100%;
+  border-right: 1px solid var(--separatorSubdued);
+  display: flex;
+  width: 260px;
+  z-index: 102;
+  transition: width 0.25s;
+}
+
+.sidebar .sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav-account-block .nav-account-name svg,
+.sidebar,
+.sidebar .nav-main,
+.sidebar .sidebar-nav-menu {
+  flex: 0 0 auto;
+}
+
+.sidebar.show-onboarding,
+.sidebar.show-onboarding:active {
+  box-shadow: 6px 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebar hr,
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar .sidebar-left {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 0.1875rem);
+}
+
+.sidebar .sidebar-resizer {
+  width: 0.1875rem;
+}
+
+.sidebar .sidebar-bottom,
+.sidebar-nav-menu {
+  background-color: var(--sidebarBackground);
+  align-items: center;
+  display: flex;
+}
+
+.sidebar .sidebar-bottom {
+  border-bottom: 1px solid var(--separatorSubdued);
+  box-sizing: content-box;
+  flex: 0 0 1.75rem;
+  height: 1.75rem;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  width: 100%;
+}
+
+.sidebar .button-sidebar {
+  margin: 0.5rem 1rem;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  padding: 0.25rem 1rem;
+}
+
+.sidebar-nav-menu {
+  color: var(--sidebarLabelPrimary);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  height: auto;
+  justify-content: space-between;
+  margin: 0.5rem 0.3125rem 0.5rem 0.5rem;
+  padding: 0.3125rem 0.5rem;
+  transition: background-color 0.15s ease;
+}
+
+.sidebar-nav-menu:hover {
+  background-color: var(--sidebarButtonBackgroundActive);
+}
+
+.sidebar-nav-menu .sidebar-nav-ynab {
+  flex: 0 0 auto;
+  margin: 0 0.5rem;
+  width: 1.5rem;
+}
+
+.sidebar-nav-menu .sidebar-nav-budget-email {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  text-align: left;
+}
+
+.sidebar-nav-menu .sidebar-nav-budget-email,
+.sidebar-nav-menu .sidebar-nav-budget-email .sidebar-nav-budget-email-budget {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-nav-menu .sidebar-nav-budget-email .sidebar-nav-budget-email-email {
+  opacity: 0.7;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+  filter: alpha(opacity=70);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-contents {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-collapse,
+.sidebar-expand {
+  border: 0;
+  display: flex;
+  flex: 0 0 auto;
+  margin: 0 0.5rem 0 auto;
+  opacity: 0.8;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+  filter: alpha(opacity=80);
+  width: 2rem;
+}
+
+.sidebar-collapse:hover,
+.sidebar-expand:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.sidebar-collapse .ynab-new-icon,
+.sidebar-expand .ynab-new-icon {
+  fill: none;
+  color: var(--sidebarLabelPrimary);
+  stroke-width: 2;
+}
+
+.sidebar-expand {
+  align-self: center;
+  justify-content: center;
+  margin-left: 0.2rem;
+}
+
+.sidebar-referral-program .sidebar-refer-friends {
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.sidebar-referral-program .referral-program-label-full {
+  display: inline;
+}
+
+.sidebar-referral-program .referral-program-label-short {
+  display: none;
+}
+
+/* Group container sidebar */
+.group-container .sidebar-fixed {
+  height: 100%;
+  position: fixed;
+  width: 17.625rem;
+}
+
+.group-container .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  background-color: var(--sidebarBackground);
+  color: var(--sidebarLabelPrimary);
+  width: auto;
+}
+
+.group-container .sidebar__navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.group-container .sidebar__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.group-container .sidebar-title-container {
+  color: var(--sidebarLabelPrimary);
+}
+
+.group-container .sidebar-title-container .sidebar-nav-menu {
+  margin: 0;
+  width: 100%;
+}
+
+.group-container .sidebar__link {
+  align-items: center;
+  display: flex;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.group-container .sidebar__link:active,
+.group-container .sidebar__link:hover {
+  border-radius: 0.3125rem;
+  background-color: var(--sidebarButtonBackgroundSelected);
+}
+
+.group-container .sidebar__link,
+.group-container .sidebar__link:visited {
+  color: var(--sidebarLabelPrimary);
+}
+
+.group-container .sidebar__link svg {
+  color: var(--sidebarLabelPrimary);
+  margin: 0 0 0 0.5rem;
+}
+
+.group-container .sidebar__link.active {
+  border-radius: 0.3125rem;
+  background-color: var(--sidebarButtonBackgroundSelected);
+}
+
+.group-container .sidebar-logout {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.375rem;
+}
+
+/* Nav accounts */
+.nav-accounts {
+  line-height: 1.5;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-accounts .nav-account {
+  padding: 0.5rem 0 0;
+}
+
+.nav-accounts .nav-account.loan .negative {
+  background-color: inherit;
+  color: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-accounts .negative {
+  background-color: var(--sidebarAccountNegativeBalanceBackground);
+  color: var(--labelNegative);
+  border-radius: 1000px;
+  display: block;
+  margin: 0 -0.265rem 0.2rem 0.5rem;
+  margin-bottom: 0.2em;
+  margin-right: -0.265rem;
+  padding: 0.125rem 0.375rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-account-notification {
+  flex: 0 0 27%;
+  margin-bottom: 0.3em;
+  text-align: right;
+}
+
+.nav-account-notification .amount-is-zero {
+  display: none;
+}
+
+.nav-account-name {
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+}
+
+.nav-account-name::selection {
+  background: 0 0;
+}
+
+.nav-account-name::-moz-selection {
+  background: 0 0;
+}
+
+.nav-account-value {
+  flex: 0 1 auto;
+  margin-bottom: -0.2em;
+  padding-right: 0;
+  position: relative;
+  text-align: right;
+}
+
+.nav-account-value .currency {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-account-value:not(.nav-account-block-value) .positive {
+  display: block;
+  margin-bottom: 0.0625rem;
+  margin-right: -0.265rem;
+  padding: 0 0.4em;
+}
+
+.nav-account-block,
+.nav-account-row {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  margin: 0 0.3125rem 0.25rem 0.5rem;
+  padding: 0;
+}
+
+.nav-account-block .nav-account-value {
+  flex: 0 1 auto;
+  margin-left: auto;
+  max-width: 13rem;
+}
+
+.nav-account-block .nav-account-icons {
+  flex: 0 0 auto;
+  height: 1rem;
+  margin: 0 0.5rem;
+  position: relative;
+  width: 1rem;
+}
+
+.nav-account-block .nav-account-name {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+  padding-left: 0;
+  width: 100%;
+}
+
+.nav-account-block .nav-account-name:hover .nav-account-add-account,
+.reports-net-worth .reports-net-worth-tooltip em {
+  display: block;
+}
+
+.nav-account-block .nav-account-name div {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-account-block .nav-account-name-button {
+  color: var(--sidebarLabelPrimary);
+  float: left;
+  letter-spacing: 0.085rem;
+  text-align: left;
+}
+
+.nav-account-block .nav-account-name-button .ynab-new-icon {
+  fill: var(--sidebarLabelPrimary);
+  margin: 0 0.5rem 0 0.75rem;
+  position: relative;
+  top: -0.0625rem;
+}
+
+.nav-account-block .nav-account-add-account {
+  background-color: transparent;
+  border: 0;
+  color: var(--sidebarLabelPrimary);
+  display: none;
+  float: left;
+  margin: 0 0 0 1em;
+  padding: 0.1em 0.5em;
+  box-shadow: none;
+}
+
+.nav-account-block .nav-account-add-account .ynab-new-icon {
+  color: var(--sidebarLabelPrimary);
+}
+
+.nav-account-block .nav-account-add-account:hover {
+  border: 0;
+  box-shadow: none;
+  background-color: var(--sidebarButtonBackgroundActive);
+}
+
+.nav-account.nav-account-wider-icons .nav-account-icons.nav-account-icons-right {
+  height: 1.5rem;
+  margin: 0 0.5rem 0.2rem;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  padding: 0 0 0 0.5rem;
+  width: 3.75rem;
+}
+
+.nav-account.nav-account-wider-icons .nav-account-icons.nav-account-icons-right button {
+  padding: 0.125rem 0.25rem;
+  background-color: var(--sidebarButtonTertiaryBackground);
+  color: var(--sidebarLabelPrimary);
+  border-radius: 0.5rem;
+}
+
+.nav-account.nav-account-wider-icons .nav-account-icons.nav-account-icons-right button:hover {
+  background-color: var(--sidebarButtonTertiaryBackgroundActive);
+}
+
+.nav-account.nav-account-wider-icons .nav-account-icons.nav-account-icons-right button:active {
+  background-color: var(--sidebarButtonTertiaryBackgroundPressed);
+}
+
+.nav-account-row {
+  border-radius: 0.375rem;
+}
+
+.nav-account-row .nav-account-name {
+  line-height: 2.3;
+  color: var(--sidebarLabelPrimary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.nav-account-row .nav-account-icons {
+  flex: 0 0 auto;
+  height: 1rem;
+  margin: 0 0.5rem;
+  position: relative;
+  width: 1rem;
+}
+
+.nav-account-row .nav-account-icons .ynab-new-icon {
+  bottom: 0;
+  fill: var(--sidebarLabelPrimary);
+  left: 0;
+  margin: auto;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.nav-account-row .nav-account-icons.nav-account-icons-left .ynab-new-icon.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.nav-account-row .nav-account-icons.nav-account-icons-left .ynab-new-icon.edit {
+  display: none;
+  height: 0.75rem;
+  opacity: 0.7;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+  filter: alpha(opacity=70);
+  width: 0.75rem;
+}
+
+.nav-account-row .nav-account-icons.nav-account-icons-right {
+  cursor: default;
+  opacity: 0.75;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=75)';
+  filter: alpha(opacity=75);
+}
+
+.nav-account-row .nav-account-icons.nav-account-icons-right svg {
+  padding: 0.125rem;
+}
+
+.nav-account-row .nav-account-icons.nav-account-icons-right.active,
+.nav-account-row .nav-account-icons.nav-account-icons-right:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.nav-account-row.is-selected {
+  background-color: var(--sidebarButtonBackgroundSelected);
+}
+
+.nav-account-row.is-editing-this-account:not(.is-selected),
+.nav-account-row:hover:not(.is-selected) {
+  background-color: var(--sidebarButtonBackgroundActive);
+}
+
+.nav-account-row.is-editing-this-account .nav-account-icons-left .ynab-new-icon.edit,
+.nav-account-row:hover .nav-account-icons-left .ynab-new-icon.edit {
+  display: inline-block;
+  top: -1px;
+}
+
+.nav-account-row.is-editing-this-account .nav-account-icons-left .ynab-new-icon.dot,
+.nav-account-row.is-editing-this-account .notification,
+.nav-account-row:hover .nav-account-icons-left .ynab-new-icon.dot,
+.nav-account-row:hover .notification,
+.nav-account.account-is-dragging .ynab-new-icon.edit {
+  display: none;
+}
+
+.nav-accounts-empty-state {
+  background-color: var(--sidebarButtonBackgroundActive);
+  border-radius: 5px;
+  margin: 0.65rem;
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+.nav-accounts-empty-state p {
+  color: var(--sidebarLabelSecondary);
+  margin: 0.2rem 0;
+}
+
+/* Sidebar resizer */
+.sidebar-resizer {
+  align-items: center;
+  cursor: ew-resize;
+  display: flex;
+  position: relative;
+}
+
+.nav-account-row .nav-account-icons.nav-account-icons-left:hover .ynab-new-icon.edit,
+.sidebar-resizer:hover .sidebar-resizer-indicator,
+.sidebar.is-resizing .sidebar-resizer-indicator {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.sidebar-resizer-indicator {
+  border-radius: 6.25rem;
+  height: 2.5rem;
+  margin-left: 0.5rem;
+  opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: alpha(opacity=0);
+  position: fixed;
+  top: calc(50% + 1.25rem);
+  width: 0.5rem;
+  background-color: var(--actionPrimary);
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.sidebar.is-resizing {
+  user-select: disabled;
+  overflow: hidden;
+}
+
+.sidebar-resized-account-value-and-refer-label-collapsed .nav-account-value,
+.sidebar-resized-account-value-and-refer-label-collapsed .sidebar-referral-program .referral-program-label-full,
+.sidebar-resized-collapsed .nav-accounts,
+.sidebar-resized-collapsed .nav-accounts-empty-state,
+.sidebar-resized-collapsed .nav-add-account,
+.sidebar-resized-collapsed .navlink-label,
+.sidebar-resized-collapsed .sidebar-nav-menu-budget,
+.sidebar-resized-collapsed .sidebar-referral-program {
+  display: none;
+}
+
+.sidebar-resized-account-value-and-refer-label-collapsed .sidebar-referral-program .referral-program-label-short {
+  display: inline;
+}
+
+ul.nav-main .sidebar-nav-menu-collapsed {
+  display: none;
+  margin-top: 0.5125rem;
+}
+
+.sidebar-resized-collapsed ul.nav-main .sidebar-nav-menu-collapsed {
+  display: flex;
+  height: 2.9375rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-resized-collapsed .ftue-add-accounts a,
+.sidebar-resized-collapsed .ftue-add-accounts button,
+.sidebar-resized-collapsed .nav-main a,
+.sidebar-resized-collapsed .nav-main button {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-resized-collapsed .ftue-add-accounts .ynab-new-icon,
+.sidebar-resized-collapsed .nav-main .ynab-new-icon {
+  margin: 0 0.5rem;
+}
+
+.sidebar-resized-collapsed .sidebar-bottom {
+  justify-content: center;
+}
+
+.accounts-header .accounts-header-actions .reconcile-button-and-label .accounts-header-edit-account svg,
+.accounts-header .accounts-header-actions .reconcile-button-and-label .accounts-header-reconcile svg,
+.sidebar-resized-collapsed .sidebar-expand {
+  margin-right: 0;
+}
+
+.accounts-header hr,
+.modal-account-reconcile .modal-account-reconcile-enter-balance h3,
+.modal-account-view-options .date-range-from-to select,
+.modal-reports-timeframe .date-range-from-to select,
+.nav-accounts-empty-state h5,
+.sidebar-resized-collapsed .sidebar-expand .ynab-new-icon {
+  margin: 0;
+}
+
+/* nav main */
+.nav-account-block .nav-account-name svg,
+.sidebar,
+.sidebar .nav-main,
+.sidebar .sidebar-nav-menu {
+  flex: 0 0 auto;
+}
+
+.nav-main {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.ftue-add-accounts .navlink,
+.nav-main .navlink {
+  display: flex;
+  height: 2.5rem;
+  margin: 0 0 0.25rem;
+  padding: 0;
+  width: 100%;
+}
+
+.ftue-add-accounts a,
+.ftue-add-accounts button,
+.ftue-add-accounts button.button-sidebar,
+.nav-main a,
+.nav-main button,
+.nav-main button.button-sidebar {
+  align-items: center;
+  border: 0;
+  border-radius: 0.375rem;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  margin: 0 0.3125rem 0 0.5rem;
+  overflow: hidden;
+  padding: 0.4rem 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.ftue-add-accounts a:hover,
+.ftue-add-accounts button:hover,
+.nav-main a:hover,
+.nav-main button:hover {
+  background-color: var(--sidebarButtonBackgroundActive);
+}
+
+.ftue-add-accounts li.active a,
+.nav-main li.active a {
+  background-color: var(--sidebarButtonBackgroundSelected);
+}
+
+.ftue-add-accounts .ynab-new-icon,
+.ftue-add-accounts svg,
+.nav-main .ynab-new-icon,
+.nav-main svg {
+  fill: var(--sidebarLabelPrimary);
+  color: var(--sidebarLabelPrimary);
+  flex: 0 0 auto;
+  margin: 0 0.5rem;
+  text-align: center;
+  width: 1.5rem;
+}
+
+ul.nav-main .sidebar-nav-menu-collapsed {
+  display: none;
+  margin-top: 0.5125rem;
+}
+
+.sidebar-resized-collapsed ul.nav-main .sidebar-nav-menu-collapsed {
+  display: flex;
+  height: 2.9375rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-resized-collapsed .ftue-add-accounts a,
+.sidebar-resized-collapsed .ftue-add-accounts button,
+.sidebar-resized-collapsed .nav-main a,
+.sidebar-resized-collapsed .nav-main button {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-resized-collapsed .ftue-add-accounts .ynab-new-icon,
+.sidebar-resized-collapsed .nav-main .ynab-new-icon {
+  margin: 0 0.5rem;
+}
+
+/* Add account button */
+.budget-view-row ul.budget-view-buttons li .view-button-overspent,
+.ynab-button,
+.ynab-new-settings-menu ul.modal-list a span,
+.ynab-new-settings-menu ul.modal-list button span {
+  align-items: center;
+  display: flex;
+}

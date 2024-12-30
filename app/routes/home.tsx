@@ -1,7 +1,7 @@
 import ContentLayout from '~/components/layouts/content-layout';
 import PageLayout from '~/components/layouts/page-layout';
 import BudgetHeader from '~/features/budget-header/budget-header';
-import BudgetTable from '~/features/budget-table/budget-table';
+import BudgetTableAndInspector from '~/features/budget-table-and-inspector/budget-table-and-inspector';
 import SidebarNav from '~/features/sidebar-nav/components/sidebar-nav';
 
 export function meta() {
@@ -17,7 +17,8 @@ export default function Home() {
       <SidebarNav />
       <ContentLayout className="has-budget-views">
         <BudgetHeader />
-        <BudgetTable />
+
+        <BudgetTableAndInspector />
       </ContentLayout>
     </PageLayout>
   );
